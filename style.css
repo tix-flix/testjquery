@@ -1,307 +1,279 @@
 @font-face {
-    font-family: Gilroy-Bold;
-    src: url(./fonts/Gilroy-Bold.ttf);
-}
-@font-face {
-    font-family: Gilroy-Medium;
-    src: url(./fonts/Gilroy-Medium.ttf);
-}
-@font-face {
-    font-family: Inter-bold;
-    src: url(./fonts/Inter/Inter_28pt-Bold.ttf);
-}
-@font-face {
-    font-family: Gilroy-SemiBold;
-    src: url(./fonts/Gilroy-SemiBold.ttf);
-}
-* {
-    padding: 0px;
-    margin-top: 15px;
-    box-sizing: border-box;
-    user-select: none;
-}
-.header {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    user-select: none;
-}
-.header__link{
-    font-family: "Gilroy-Bold";
-}
-.header__size {
-    display: flex;
-    gap: 10px;
-}
-.header__center {
-    display: flex;
-    gap: 50px;
-    font-family: "Gilroy-Medium";
-}
-.header__btn {
-    width: 100px;
-    height: 40px;
-    border-radius: 3px;
-    text-align: center;
-    padding-top: 10px;
-    color: rgb(0, 0, 0);
-    margin-left: -15px;
-    font-family: "Gilroy-Medium";
-    transition: 0.3s;
-}
-.header__btn:hover {
-    background-color: #49AD09;
-    color: white;
-    box-shadow: 1px 2px 2px darkgray;
-}
-.header__links:hover {
-    color: #49AD09;
-    text-shadow: 1px 1px 2px rgb(145, 144, 144);
-}
-.header__btn:active {
-    box-shadow: 1px 2px 2px rgb(114, 114, 114);
-    transform: scale(0.8);
-}
-.center {
-    display: flex;
-}
-.center__img {
-    display: flex;
-    width: 360px;
-    height: 800px;
-}
-#center__text {
-    width: 550px;
-    height: 800px;
-    display: grid;
-    justify-content: center;
-}
-#img__rtg1 {
-    position: relative;
-    width: 130px;
-    height: 400px;
-    background-color: #49AD09;
-    top: 180px;
-    left: 50px;
-    z-index: -1;
-}
-#img__rtg2 {
-    position: relative;
-    width: 120px;
-    height: 130px;
-    background-color: #49AD09;
-    top: 180px;
-    left: 30px;
-    z-index: -2;
-}
-#img__img1 {
-    position: absolute;
-    z-index: 1;
-    top: 260px;
-    left: 0px;
-}
-#img__img2 {
-    position: absolute;
-    z-index: 1;
-    top: 450px;
-    left: 200px;
-}
-#img__img3 {
-    position: absolute;
-    z-index: 1;
-    top: 660px;
-    left: 20px;
-}
-#img__rtg3 {
-    position: absolute;
-    width: 170px;
-    height: 360px;
-    background-color: #49AD09;
-    top: 45%;
-    right: 2%;
-}
-#img__rtg4 {
-    position: relative;
-    width: 315px;
-    height: 110px;
-    background-color: #49AD09;
-    top: 480px;
-    right: -70px;
-}
-#img__img4 {
-    position: absolute;
-    z-index: 1;
-    top: 230px;
-    right: 0px;
-}
-#img__img5 {
-    position: absolute;
-    z-index: 1;
-    top: 410px;
-    right: 100px;
-}
-#img__img6 {
-    position: absolute;
-    z-index: 1;
-    top: 660px;
-    right: 0px;
-}
-.text__title {
-    margin-top: 170px;
-    width: 400px;
-    height: 30px;
-    font-family: "Inter-bold";
-    text-align: center;
-    font-size: 55px;
-}
-#text__title {
-    color: #49AD09;
-}
-.text__prg {
-    margin-top: -20px;
-    color: #514040;
-    font-family: "Gilroy-Medium";
-    text-align: center;
-    font-size: 15px;
-}
-.title__btn {
-    background-color: #49AD09;
-    color: white;
-    font-family: "Gilroy-Medium";
-    text-align: center;
-    padding-top: 15px;
-    width: 180px;
-    height: 50px;
-    border-radius: 5px;
-    margin-left: 30px;
-    margin-top: 70px;
-}
-.title__btn:hover {
-    background-color: #5ee00d;
-    box-shadow: 1px 2px 10px darkgray;
-}
-.title__link {
-   position: relative;
-   left: 240px;
-   bottom: 35px;
-   font-family: "Gilroy-Medium";
-   color: #514040;
-}
-.brands {
-    width: 1280px;
-    height: 200px;
-    display: flex;
-    justify-content: space-around;
-    align-content: center;
-    font-family: "Gilroy-Bold";
-    color: #A1A89D;
-    font-size: 25px;
-}
-.down {
-    display: grid;
-    justify-content: center;
-    text-align: center;
-}
-.down__title2 {
-    font-family: "Gilroy-Medium";
-    color: #514040;
-    font-size: 15px;
-}
-.down__title {
-    font-family: "Gilroy-Medium";
-    color: #313131;
-    font-size: 35px;
-    font-weight: 100;
-}
-.parent {
-    display: grid;
-    grid-template-columns: repeat(2, 300px);
-    grid-template-rows: repeat(2, 250px);
-    gap: 30px;
-    text-align: left;
-    padding: 5px;
-}
-    
-.div1 { 
-    grid-area: 1 / 1 / 2 / 2;
-    padding: 15px;
-    transition: 0.3s;
-}
-.div2 { 
-    grid-area: 1 / 2 / 2 / 3;
-    padding: 15px;
-    background-color: #49AD0926;
-    transition: 0.3s;
-}
-.div3 { 
-    grid-area: 2 / 1 / 3 / 2;
-    padding: 15px;
-    transition: 0.3s;
-}
-.div4 { 
-    grid-area: 2 / 2 / 3 / 3;
-    padding: 15px;
-    background-color: #313131;
-    color: white;
-    transition: 0.3s;
+    font-family: "ryz";
+    src: url(./fonts/Sddystopiandemo-GO7xa.otf);
 }
 
-.parent__font {
-    color: #313131;
-    font-family: "Gilroy-SemiBold";
+@font-face {
+    font-family: "cyb";
+    src: url(./fonts/Sdglitchrobotdemo-GOPdO.ttf);
 }
-.parent__php {
-    font-family: "Gilroy-SemiBold";
-    color: white;
+
+@font-face {
+    font-family: "icon";
+    src: url(./fonts/icomoon.ttf);
 }
-.parent__prg {
-    color: #514040;
-    font-family: "Gilroy-Medium";
-    font-size: 13px;
-    padding-bottom: 20px;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
-#parent__prg {
-    color: white;
+body {
+    background-color: #01012b;
 }
-.parent__link {
-    font-family: "Gilroy-Medium";
-    font-size: 13px;
-    color: #313131;
+
+a {
+    text-decoration: none;
 }
-#parent__web {
-    color: #49AD09;
+
+@media screen and (max-width: 414px) {
+    .wrapper {
+        /* max-width: 400px; */
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .container {
+        height: 100%;
+    }
+    .main {
+        max-width: 400px;
+        border: solid 1px #ff2a6d;   
+    }
+    .main__info {
+        max-width: 100%;
+        flex-direction: column; 
+        height: auto;
+        padding: 10px;
+
+    }
+    .info__name {
+        text-align: center;
+    }
+    .info__img {
+        width: 100px;
+        height: 100px;
+    }
+    .plus {
+        font-size: 5em;
+        position: sticky;
+        top: -10%;
+        left: -9% !important;
+        z-index: 1000;
+    }
+    .p {
+        font-size: 1.2em;
+    }
+
+    /* Здесь заканчивается первый блок*/
+    
+    .main__skills{
+        flex-direction: column; 
+    }
+    
+    .skills__imgb{
+        width: 100px;
+        height: 100px;
+    }
+    
+    .skills__img {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .skills__name {
+        font-family: "cyb";
+        font-size: 1.5rem;
+        text-align: center;
+        padding-block: 10px;
+    }
+
+    /* Здесь заканчивается второй блок*/
+
+    .main__hobby {
+        max-width: 100%;
+        flex-direction: column; 
+        height: auto;
+        padding: 10px; 
+    }
+
+    .hobby__cont {
+        width: 100px;
+        height: 100px;
+    }
+
+    .hobby__img {
+        width: 50px;
+        height: 50px;   
+    }
+
+    .hobby__name {
+        font-family: "cyb";
+        font-size: 1.9rem !important;
+        text-align: center;
+        padding-block: 10px;
+        margin-top: 15px;    
+    }
+    
+    /* Здесь заканчивается третий блок*/
+    
+    .main__proj {
+        max-width: 100%;
+        flex-direction: column; 
+        height: auto;
+        padding: 10px;  
+    }
+    
+    .proj__img {
+        margin-block: 10px;  
+    }
+
+    /* Здесь заканчивается третий блок*/
 }
-.div1:hover {
-    box-shadow: -1px 2px 65px darkgray;
-    transform: scale(1.1);
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 98%;
+    max-height: 98%;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
-.div2:hover {
-    box-shadow: -1px 2px 65px darkgray;
-    transform: scale(1.1);
+
+.plus{
+    color: #ff2a6d;
+    font-size: 7em;
+    font-weight: 900;
+    animation: plus 2s linear infinite;
+    align-self: flex-start;
+    flex-direction: column;
+    position: sticky;
+    top: 5%;
+    left: 1%;
+    z-index: 1000;
 }
-.div3:hover {
-    box-shadow: -1px 2px 55px darkgray;
-    transform: scale(1.1);
+.p {
+    align-self: flex-end;
+    bottom: 5%;
+    right: 1%;
+    z-index: 1000;
 }
-.div4:hover {
-    box-shadow: -1px 2px 65px darkgray;
-    transform: scale(1.1);
+
+@keyframes plus {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }    
 }
-.down-btn {
-    width: 250px;
-    height: 40px;
-    border-radius: 3px;
-    text-align: center;
-    padding-top: 10px;
-    color: white;
-    font-size: 15px;
-    font-family: "Gilroy-Medium";
-    transition: 0.3s;
-    background-color: #49AD09;
-    justify-self: center;
-    margin: 50px;
+
+.main__Name {
+    font-size: 2rem;
+    font-family: "cyb";
+    color: #fdf500;
+    background-color: rgb(0, 0, 0);
+    width: 20%;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
-.down-btn:hover {
-    box-shadow: 1px 2px 10px darkgray;
-    background-color: #5bdb0b;
+
+.main {
+    width: 86%;
+    height: auto;
+    border: solid 5px #ff2a6d;
+    margin: 0 auto;
+}
+
+.main__info {
+    margin-bottom: 100px;
+    width: 100%;
+    height: auto;
+    background: linear-gradient(45deg, #fdf500, #fdf500e0);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: 6px dashed black;
+    padding: 20px 0;    
+}
+
+.info__name {
+    font-family: "ryz";
+    font-size: 5rem;
+    margin: 15px;
+}
+
+.info__img {
+    width: 180px;
+    height: 180px;
+    margin: 10px;
+    border: 4px outset #ff2a6d;
+}
+
+/* Первый блок end*/
+
+.main__skills, .main__hobby, .main__proj, .main__footer {
+    margin-bottom: 100px;
+    width: 100%;
+    height: auto;
+    background: linear-gradient(45deg, #fdf500, #fdf500e0);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: 6px dashed black;
+    padding: 20px 0; 
+}
+
+.skills__imgb {
+    width: 160px;
+    height: 160px;
+    background-color: black;
+    border: solid 3px #ff2a6d;
+    border-radius: 50%;
+}
+
+.skills__img {
+    width: 150px;
+    height: 150px;
+}
+
+.skills__name {
+    font-family: "cyb";
+    font-size: 3.5rem;
+}
+
+/* второй блок end */
+
+.hobby__cont {
+    width: 180px;
+    height: 180px;
+    background-color: black;
+    border: solid 3px #ff2a6d;
+    border-radius: 50%;
+}
+
+.hobby__img {
+    width: 200px;
+    height: 200px; 
+}
+
+.hobby__name {
+    font-family: "ryz";
+    font-size: 2.5rem; 
+}
+
+/* Третий блок end */
+
+.proj__img {
+    width: 180px;
+    height: 150px;
+    border-radius: 10px;
+    border: solid 3px #ff2a6d;
+}
+
+/* Четвертый блок end */
+
+.size {
+    font-size: 2.5rem;
 }
