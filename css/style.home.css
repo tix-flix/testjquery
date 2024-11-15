@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main: #000000;
+    --textColor: #C53030;
+    --altcolor: #e43131;
+    --titleW: white;
+
+    --fontFamily: sans-serif;
+
+    --borderRadius: 10px;
+
+    --margin: 10px;
+
+    --vs: 12px;
+    --sm: 16px;
+    --md: 24px;
+    --xl: 32px;
+    --xxl: 48px;
+}
+
+a,
+a:hover,
+a:active,
+li,
+ol {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.burger-menu {
+    display: none;
+}
+
+@media screen and (max-width: 414px) {
+    .nav {
+        display: none !important;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+
+    .burger-menu__toggle {
+        visibility: hidden;
+        opacity: 0;
+        height: 0;
+    }
+
+    .burger-menu__btn {
+        display: flex;
+        align-items: center;
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        width: 26px;
+        height: 26px;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    .burger-menu__btn>span,
+    .burger-menu__btn>span::before,
+    .burger-menu__btn>span::after {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: var(--textColor);
+    }
+
+    .burger-menu__btn>span::before {
+        content: "";
+        top: -8px;
+    }
+
+    .burger-menu__btn>span::after {
+        content: "";
+        top: 8px;
+    }
+
+    .burger-menu__box {
+        display: block;
+        position: fixed;
+        visibility: hidden;
+        top: 0;
+        left: -100%;
+        width: 300px;
+        height: 100%;
+        margin: 0;
+        padding: 80px 0;
+        list-style: none;
+        text-align: center;
+        background-color: var(--main);
+        box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .burger-menu__link {
+        display: block;
+        padding: 12px 24px;
+        color: var(--textColor);
+        font-family: "Roboto", sans-serif;
+        font-size: 20px;
+        font-weight: 600;
+        text-decoration: none;
+    }
+
+    .burger-menu__link:hover {
+        background-color: var(--textColor);
+    }
+
+    .burger-menu__toggle:checked~.burger-menu__btn>span {
+        transform: rotate(45deg);
+    }
+
+    .burger-menu__toggle:checked~.burger-menu__btn>span::before {
+        top: 0;
+        transform: rotate(0);
+    }
+
+    .burger-menu__toggle:checked~.burger-menu__btn>span::after {
+        top: 0;
+        transform: rotate(90deg);
+    }
+
+    .burger-menu__toggle:checked~.burger-menu__box {
+        visibility: visible;
+        left: 0;
+    }
+
+    .burger-menu__btn>span,
+    .burger-menu__btn>span::before,
+    .burger-menu__btn>span::after {
+        transition-duration: 0.3s;
+    }
+
+    .burger-menu__box {
+        transition-duration: 0.3s;
+    }
+
+    .burger-menu__link {
+        transition-duration: 0.3s;
+    }
+
+    .main__cont{
+        display: grid;
+        grid-template-columns: repeat(1, 300px) !important;
+    }
+
+    .imgjs{
+        width: 280px;
+    }
+
+    .text{
+        font-size: var(--md);
+    }
+}
+
+/* Нацигация */
+
+.act {
+    background-color: var(--main);
+    border: 3px solid var(--textColor);
+    color: var(--textColor);
+    font-family: var(--fontFamily);
+    font-size: 20px;
+    padding: 10px;
+    margin: var(--margin);
+    border-radius: var(--borderRadius);
+}
+
+.nav {
+    width: 100%;
+    height: 85px;
+    background-color: var(--main);
+    display: flex;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+}
+
+.nav__logo {
+    margin-left: 20px;
+    width: 60px;
+}
+
+.nav__list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 0 auto;
+}
+
+.nav__link {
+    color: var(--main);
+    font-family: var(--fontFamily);
+    font-size: 20px;
+    padding: 10px;
+    background-color: var(--textColor);
+    margin: var(--margin);
+    border-radius: var(--borderRadius);
+}
+
+/* Навигация */
+
+.bgi {
+    height: 100%;
+    background-image: url('../components/image/black.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.main{
+    display: grid;
+    place-items: center;
+    padding-block: 100px;
+    gap: 25px;
+}
+
+.main__cont{
+    display: grid;
+    grid-template-columns: repeat(2, 400px);
+    gap: 55px;
+}
+
+.cont__title{
+    color: var(--textColor);
+    font-family: var(--fontFamily);
+    font-size: var(--xl);
+    text-align: center;
+}
+
+.contJs{
+    display: grid;
+    place-items: center;
+    border: 3px solid var(--textColor);
+    border-radius: var(--borderRadius);
+    padding: var(--margin);
+}
+
+.text{
+    color: var(--titleW);
+    font-family: var(--fontFamily);
+    text-align: center;
+}
+
+.imgjs{
+    border-radius: var(--borderRadius);
+}

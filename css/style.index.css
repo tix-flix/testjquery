@@ -1,0 +1,341 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main: #000000;
+  --textColor: #C53030;
+  --altcolor: #e43131;
+  --titleW: white;
+
+  --fontFamily: sans-serif;
+
+  --borderRadius: 10px;
+
+  --margin: 10px;
+  --altMargin: 25px;
+
+  --sm: 16px;
+  --md: 24px;
+  --xl: 32px;
+  --xxl: 48px;
+}
+
+a,
+a:hover,
+a:active,
+li,
+ol {
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.burger-menu{
+    display: none;
+}
+
+@media screen and (max-width: 414px) {
+    .nav{
+        display: none !important;
+    }    
+    .burger-menu{
+        display: block;
+    }
+
+  .burger-menu__toggle {
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+  }
+  .burger-menu__btn {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  .burger-menu__btn > span,
+  .burger-menu__btn > span::before,
+  .burger-menu__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: var(--textColor);
+  }
+  .burger-menu__btn > span::before {
+    content: "";
+    top: -8px;
+  }
+  .burger-menu__btn > span::after {
+    content: "";
+    top: 8px;
+  }
+  .burger-menu__box {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    left: -100%;
+    width: 300px;
+    height: 100%;
+    margin: 0;
+    padding: 80px 0;
+    list-style: none;
+    text-align: center;
+    background-color: var(--main);
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
+  }
+  .burger-menu__link {
+    display: block;
+    padding: 12px 24px;
+    color: var(--textColor);
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .burger-menu__link:hover {
+    background-color: var(--textColor);
+  }
+  .burger-menu__toggle:checked ~ .burger-menu__btn > span {
+    transform: rotate(45deg);
+  }
+  .burger-menu__toggle:checked ~ .burger-menu__btn > span::before {
+    top: 0;
+    transform: rotate(0);
+  }
+  .burger-menu__toggle:checked ~ .burger-menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+  .burger-menu__toggle:checked ~ .burger-menu__box {
+    visibility: visible;
+    left: 0;
+  }
+  .burger-menu__btn > span,
+  .burger-menu__btn > span::before,
+  .burger-menu__btn > span::after {
+    transition-duration: 0.3s;
+  }
+
+  .burger-menu__box {
+    transition-duration: 0.3s;
+  }
+
+  .burger-menu__link {
+    transition-duration: 0.3s;
+  }
+
+  #min{
+    width: 250px;
+    height: 150px;
+    left: calc(50% - 125px);
+  }
+
+  .mdlActive{
+    top: 350px !important;
+  }
+
+  .second__cont{
+    display: grid;
+    grid-template-columns: repeat(2, 180px) !important;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .second__img{
+    max-width: 100%;
+  }
+
+  #main__second{
+    max-width: 100%;
+    height: 80vh;
+  }
+
+  .third__cont iframe {
+    width: 100%;
+    height: 200px;
+  }
+}
+
+/* Навигация */
+
+.act {
+  background-color: var(--main);
+  border: 3px solid var(--textColor);
+  color: var(--textColor);
+  font-family: var(--fontFamily);
+  font-size: 20px;
+  padding: 10px;
+  margin: var(--margin);
+  border-radius: var(--borderRadius);
+}
+
+.nav {
+  width: 100%;
+  height: 85px;
+  background-color: var(--main);
+  display: flex;
+  align-items: center;
+  position: fixed;
+  z-index: 1000;
+}
+
+.nav__logo {
+  position: absolute;
+  margin-left: 20px;
+  width: 60px;
+}
+
+.nav__list {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 0 auto;
+}
+
+.nav__link {
+  color: var(--main);
+  font-family: var(--fontFamily);
+  font-size: 20px;
+  padding: 10px;
+  background-color: var(--textColor);
+  margin: var(--margin);
+  border-radius: var(--borderRadius);
+}
+
+/* Навигация */
+/* Первый блок */
+
+.bgi {
+  height: 100vh;
+  background-image: url('../components/image/dark.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.main__first {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.first__cont{
+  display: grid;
+  place-items: center;
+}
+
+.first__img{
+  max-width: 400px;
+  transition: transform 0.5s ease;
+  cursor: pointer;
+  transform-origin: center;
+}
+
+.first__img:hover{
+  transform: rotateY(360deg);
+}
+
+.first__title{
+  color: var(--titleW);
+  font-family: var(--fontFamily);
+  text-align: center;
+}
+
+.first__btn{
+  width: 200px;
+  height: 45px;
+  background-color: var(--textColor);
+  color: var(--main);
+  border-radius: var(--borderRadius);
+  font-size: var(--sm);
+  font-weight: 600;
+  margin-top: 25px;
+}
+
+.first__btn:hover{
+  background-color: var(--altcolor);
+}
+.first__btn:active{
+  background-color: #b41313;
+}
+
+.modal{
+  width: 450px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--margin);
+  font-family: var(--fontFamily);
+  background-color: var(--textColor);
+  border-radius: var(--borderRadius);
+  border: 3px solid var(--titleW);
+  position: absolute;
+  top: -350px;
+  left: calc(50% - 225px);
+  transition: 0.3s;
+}
+
+.mdlActive{
+  top: 200px;
+}
+
+/* второй блок */
+
+.main__second {
+  width: 100%;
+  height: 95vh;
+  background-color: var(--titleW);
+  display: grid;
+  place-items: center;
+}
+
+.second__cont{
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  gap: 10px;
+  justify-content: center;
+  place-items: center;
+}
+
+.second__title{
+  margin: var(--margin);
+  color: var(--main);
+  font-family: var(--fontFamily);
+}
+
+.second__img{
+  width: 300px;
+  border-radius: var(--borderRadius);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.second__img:hover{
+  transform: scale(1.8);
+}
+
+/* Третий блок */
+
+.main__third {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.third__title{
+  margin: var(--margin);
+  color: var(--titleW);
+  font-family: var(--fontFamily);
+}
