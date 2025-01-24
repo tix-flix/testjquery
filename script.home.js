@@ -1,6 +1,6 @@
 $.ajax({
     type: "GET",
-    url: "./components/dataBase/services.json",
+    url: "/components/dataBase/services.json",
     success: function (response) {
         response.map(element => {
             let characterDiv = `
