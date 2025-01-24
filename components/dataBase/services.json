@@ -4,7 +4,7 @@
       "id": 0,
       "name": "Детективные услуги",
       "price": "15,000 сом",
-      "image": "/components/image/img.json/pultovaya.jpg"
+      "image": "./components/image/img.json/pultovaya.jpg"
     },
     {
       "id": 1,
